@@ -9,6 +9,8 @@ page {
   --s-24: 48rpx;
   --s-32: 64rpx;
   --s-40: 80rpx;
+  --s-60: 120rpx;
+  --s-80: 160rpx;
 
   --s-m-v: var(--s-16);
   --s-m-h: var(--s-16);
@@ -16,14 +18,6 @@ page {
   --s-p-h: var(--s-16);
 
   --s-br: var(--s-8);
-
-  --c-main-bg: #f3f5fa;
-  --c-pan-bg: #ffffff;
-  --c-primary: #ff3c00;
-
-  --c-font-color: #000000;
-
-  --dev-bg: #e2e2e2;
 
   --f-w-400: 400;
   --f-w-500: 500;
@@ -39,7 +33,16 @@ page {
   --f-w-extrabold: var(--f-w-800);
   --f-w-black: var(--f-w-900);
 
+  --c-main-bg: #f5f6fa;
+  --c-pan-bg: #ffffff;
+  --c-primary: #5670f9;
+
+  --c-font-color: #000000;
+  --dev-bg: #f5f6fa;
+
   background-color: var(--c-main-bg);
+
+  line-height: 1.6;
 }
 
 .use-margin {

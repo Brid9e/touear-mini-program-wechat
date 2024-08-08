@@ -51,9 +51,10 @@ const classOptions = computed(() => ({
 </template>
 <style lang="scss" scoped>
 .base-panel {
+  overflow: hidden;
 
   .base-panel__title {
-    margin-bottom: var(--s-4);
+    margin-bottom: var(--s-8);
     font-weight: var(--f-w-semibold);
     font-size: var(--s-14);
   }

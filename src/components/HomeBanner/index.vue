@@ -1,10 +1,16 @@
 <script setup>
 import { computed } from 'vue'
 import BaseSwiper from '@/components/base/BaseSwiper.vue';
+import { useSystemInfo } from '@/store'
+
+const systemInfo = useSystemInfo()
+
+const navBarHeight = computed(() => ((systemInfo.navBarHeight * 100) / systemInfo.window.height) + 'vh')
 
 const swiperOptions = computed(() => ({
   uniappSwiperOptons: {
     indicatorDots: true,
+    circular: true,
   },
   data: [{
     test: 'Swiper Item',
@@ -25,6 +31,7 @@ const swiperOptions = computed(() => ({
 <style lang="scss" scoped>
 .home-banner {
   width: 100%;
-  height: 40vh;
+  height: calc(var(--s-80) * 2 + v-bind(navBarHeight));
+  overflow: hidden;
 }
 </style>

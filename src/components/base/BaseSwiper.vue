@@ -59,7 +59,7 @@ const classOptions = computed(() => ({
  */
 function onSwiperChange (res) {
   currentItemIndex.value = res.detail?.current
-  emits('change', mergeOptions.value?.data?.[res, detail?.current], res, detail?.current)
+  emits('change', mergeOptions.value?.data?.[res.detail?.current], res.detail?.current)
 }
 
 /**
@@ -115,15 +115,15 @@ function onClick (item, index) {
   justify-content: center;
 
   .base-swiper__indicator-dots-item {
-    width: var(--s-6);
-    height: var(--s-6);
-    border-radius: var(--s-6);
-    margin: 0 var(--s-4);
-    background-color: #ffffff73;
+    width: var(--s-4);
+    height: var(--s-4);
+    border-radius: var(--s-4);
+    margin: 0 4rpx;
+    background-color: var(--c-pan-bg);
     transition: all 0.3s ease-in-out !important;
 
     &.dot-active {
-      background-color: var(--c-primary);
+      background-color: var(--c-pan-bg);
       width: calc(var(--s-6) * 3);
     }
   }
